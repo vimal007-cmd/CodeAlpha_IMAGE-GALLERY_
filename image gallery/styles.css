@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: auto; /* Allow scrolling */
+}
+
+.container {
+    text-align: center;
+}
+
+.gallery-title {
+    margin: 20px;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.gallery {
+    background: url('C:/Users/vimal/Downloads/background for portfolio.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.gallery-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow wrapping to ensure all items fit */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px); /* Ensure items fit within their container */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+
+
